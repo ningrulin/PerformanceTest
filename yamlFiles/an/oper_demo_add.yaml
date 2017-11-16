@@ -1,0 +1,24 @@
+---
+scene_name: AddMember
+scene_range: 1
+scene_duration: 1
+total_members: 200
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: AddMember
+      inherit: ./yamlFiles/an/oper_demo_add1.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 1
+      check_result: False
+    -
+      action: AddMember
+      inherit: ./yamlFiles/an/oper_demo_add2.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 1
+      check_result: False

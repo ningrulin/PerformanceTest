@@ -1,0 +1,46 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 10
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 2
+      caps: 5
+      delay_time: 0
+      time_out: 10
+  -
+    -
+      action: GetUserInfo
+      multiple: 2
+      caps: 5
+      delay_time: 0
+  -
+    -
+      action: CreateCommonGroup
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      group_number: 2
+      sleep_after: 3
+  -
+    -
+      action: EnableGroupShare
+      multiple: 1
+      caps: 5
+      delay_time: 0
+  -
+    -
+      action: JoinGroupByID
+      multiple: 1
+      caps: 5
+      delay_time: 0
+  -
+    -
+      inherit: ../yamlFiles/scene02/start_end_cfs.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1

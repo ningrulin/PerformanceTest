@@ -1,0 +1,30 @@
+---
+scene_name: GetContactList
+total_members: 800
+scene_range: 1
+executors_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 16
+      delay_time: 1
+      caps: 50
+      sleep_after: 1
+      abnormal_interrupt: True
+  -
+    -
+      action: GetUserInfo
+      multiple: 16
+      delay_time: 1
+      caps: 50
+      sleep_after: 1
+      abnormal_interrupt: True
+  -
+    -
+      action: get_contactlist
+      inherit: ./yamlFiles/scene07/get_contactlist.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10

@@ -1,0 +1,15 @@
+---
+scene_name: GetSinfo
+scene_range: 8000
+scene_duration: 1
+total_members: 100
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: GetSinfo
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 1
+      check_result: True

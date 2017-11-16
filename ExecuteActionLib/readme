@@ -1,0 +1,27 @@
+clean_up 原则
+对于一个具体的Action：
+    如果是生产者，执行过程中失败的话，释放时以未生产完成进行释放
+    如果是消费者，执行过程中失败的话，释放时则以消费完成进行释放
+
+CRITICAL	50
+ERROR	40
+WARNING	30
+INFO	20
+DEBUG	10
+NOTSET	0
+日志打印，注意打印级别，不需要注释不想要的日志，只需要调整日志级别即可
+
+由于python 默认赋值不是值传递，而是引用传递,
+所以，当在实例一个类对象时，如果类中有两个变量同时需要同一个参数赋值时
+不要使用 = ,而要使用extend (list)，或者copy.copy()|copy.deepcopy()
+如果不这样做的话，会导致如下例子中修改a_list时，self.c_list self.d_list同时被改变
+修改self.c_list 时，a_list self.d_list，也被改变
+根本原因是这三个变量在内存中引用的是同一个对象
+
+
+
+跟会议对象相关的操作，获取执行者时，要到confid_list ==> obj 里面去找
+不要到inconf_去choice
+这样可能你choice出的成员 还没执行 conf被delete了，导致你执行失败
+不对、这样还解决不了，不能这样搞的
+需要思考一下怎么解决

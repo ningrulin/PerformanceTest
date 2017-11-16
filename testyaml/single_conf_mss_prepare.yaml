@@ -1,0 +1,43 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 6
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 6
+      delay_time: 0
+      time_out: 10
+  -
+    -
+      action: GetUserInfo
+      multiple: 1
+      caps: 6
+      delay_time: 0
+  -
+    -
+      action: CreateComGroup2
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      group_number: 6
+      sleep_after: 3
+  -
+    -
+      action: CreateConference
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 3
+  -
+    -
+      action: mss_conf
+      inherit: ./testyaml/single_conf_mss.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10

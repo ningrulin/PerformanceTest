@@ -1,0 +1,46 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 200
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 200
+      delay_time: 0
+      time_out: 20
+      sleep_after: 3
+  -
+    -
+      action: GetUserInfo
+      multiple: 1
+      caps: 200
+      delay_time: 0
+  -
+    -
+      action: CreateComGroup2
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      group_number: 200
+      sleep_after: 3
+  -
+    -
+      action: CreateConference9
+      multiple: 1
+      abnormal_interrupt: True
+      caps: 1
+      delay_time: 1
+      sleep_after: 10
+      with_media: True
+  -
+    -
+      action: EnablePPTShare
+      inherit: ./yamlFiles/an/oper_demo_ppt.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10

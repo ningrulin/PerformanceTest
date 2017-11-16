@@ -1,0 +1,16 @@
+---
+scene_name: join_conf
+scene_range: 1
+scene_duration: 1
+total_members: 50
+member_state: online_idle
+scene_step_list:
+  -
+   -
+      action: JoinConference
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 10
+      join_caps: 50
+      with_media: False

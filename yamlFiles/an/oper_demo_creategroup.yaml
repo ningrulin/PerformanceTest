@@ -1,0 +1,15 @@
+---
+scene_name: CreateAndEndConference
+scene_range: 10
+scene_duration: 5
+total_members: 200
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: CreateComGroup2
+      multiple: 1
+      caps: 8
+      delay_time: 10
+      group_number: 2
+      sleep_after: 10

@@ -1,0 +1,80 @@
+---
+scene_name: scene_confs
+scene_steps:
+  -
+    step_features:
+      -
+        data: None
+        expectationCode: "200"
+        feature_action: LoginAction
+        feature_name: login
+        optional: false
+        step_desc: Login.
+        executorsNum: 100
+    step_name: step01
+  -
+    step_features:
+      -
+        data: 2
+        expectationCode: None
+        feature_action: MxCommonAction
+        feature_name: sleep
+        optional: false
+        step_desc: MxCommonAction
+        executorsNum: 100
+    step_name: MxCommonAction
+  -
+    step_features:
+      -
+        data: 2
+        expectationCode: "200"
+        feature_action: GetUserInfoAction
+        feature_name: "get user info"
+        optional: false
+        step_desc: GetUserInfoAction
+        executorsNum: 100
+    step_name: step03
+  -
+    step_features:
+      -
+        data: 2
+        expectationCode: None
+        feature_action: MxCommonAction
+        feature_name: sleep
+        optional: false
+        step_desc: MxCommonAction
+        executorsNum: 100
+    step_name: step04
+  -
+    step_features:
+      -
+        data: None
+        expectationCode: "200"
+        feature_action: GetGroupListAction
+        feature_name: "get group info"
+        optional: false
+        step_desc: GetGroupListAction
+        executorsNum: 100
+    step_name: step05
+  -
+    step_features:
+      -
+        data: 2
+        expectationCode: None
+        feature_action: MxCommonAction
+        feature_name: sleep
+        optional: false
+        step_desc: MxCommonAction
+        executorsNum: 100
+    step_name: step06
+  -
+    step_features:
+      -
+        data: 2
+        expectationCode: "200"
+        feature_action: LogoutAction
+        feature_name: sleep
+        optional: false
+        step_desc: LogoutAction
+        executorsNum: 100
+    step_name: step07

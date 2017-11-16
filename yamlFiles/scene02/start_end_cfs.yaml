@@ -1,0 +1,21 @@
+---
+scene_name: create_conference
+scene_range: 10
+executors: 1
+executors_state: online_idle
+is_progressive: False
+scene_step_list:
+  -
+    -
+      action: CreateConference
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_after: 16
+  -
+    -
+      action: EndConference
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_after: 16

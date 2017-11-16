@@ -1,0 +1,16 @@
+---
+scene_name: CreateAndEndConference
+scene_range: 8000
+scene_duration: 1
+total_members: 200
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: CreateConference8
+      multiple: 1
+      abnormal_interrupt: False
+      caps: 49
+      delay_time: 1
+      sleep_after: 3
+      check_Tager: True

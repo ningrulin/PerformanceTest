@@ -1,0 +1,15 @@
+---
+scene_name: CreateAndEndConference
+scene_range: 1
+scene_duration: 1
+total_members: 10
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: CreateConference
+      multiple: 1
+      abnormal_interrupt: False
+      caps: 1
+      delay_time: 0
+      sleep_after: 600

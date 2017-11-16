@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+<!--注册消息中的From和to中携带的address-of-record（AOR）必须相同-->
+<scenario name="registration">
+    <!--设置全局变量,SIPP_VERSION和SERVER_NAME之间不能有空格，否则报错-->    
+    <Global variables="SIPP_VERSION,SERVER_NAME" />
+    <!--为全局变量赋值-->
+    <nop>
+        <action>
+            <assignstr assign_to="SIPP_VERSION" value="SIPp v3.4-beta1 (aka v3.3.990)-TLS-SCTP-PCAP"/>
+            <assignstr assign_to="SERVER_NAME" value="FreeSWITCH"/>
+        </action>
+    </nop>
+
+    <send retrans="500">
+        <action>
+            <log message="hhhhh"/>
+        </action>   
+        <![CDATA[
+            REGISTER sip:[remote_ip]:[remote_port] SIP/2.0
+            Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch];rport
+            From: [field0] <sip:[field0]@[remote_ip]>;tag=[call_number]
+            To: [field0] <sip:[field0]@[remote_ip]:[remote_port]>
+            CSeq: 20 REGISTER
+            Call-ID: [call_id]
+            Max-Forwards: 70
+            Contact: <sip:[field0]@[local_ip]:[local_port]>
+            Expires: 15000
+            User-Agent: [$SIPP_VERSION] 	
+        ]]>
+    </send>
+
+    <recv response="100" optional="true">
+    </recv>
+
+
+    <recv response="401" auth="true" rtd="true">
+    </recv>
+
+    <send retrans="500">
+        <![CDATA[
+            REGISTER sip:[remote_ip]:[remote_port] SIP/2.0
+            Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch];rport
+            From: [field0] <sip:[field0]@[remote_ip]>;tag=[call_number]
+            To: [field0] <sip:[field0]@[remote_ip]:[remote_port]>
+            CSeq: 21 REGISTER
+            Call-ID: [call_id]
+            Max-Forwards: 70
+            Contact: <sip:[field0]@[local_ip]:[local_port]>
+            Expires: 15000
+            User-Agent: [$SIPP_VERSION] 
+            [field1]
+        ]]>
+    </send>
+
+    <recv response="100" optional="true">
+    </recv>
+
+    <recv response="200">
+    </recv>
+    <ResponseTimeRepartition value="10, 20"/>
+    <CallLengthRepartition value="10"/>
+</scenario>
+

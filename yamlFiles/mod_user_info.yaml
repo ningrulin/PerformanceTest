@@ -1,0 +1,28 @@
+---
+scene_name: login_sleep_logout
+total_members: 1000
+scene_range: 1
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 10
+      caps: 100
+      abnormal_interrupt: True
+      delay_time: 1
+      sleep_after: 3
+  -
+    -
+      action: GetUserInfo
+      multiple: 10
+      caps: 100
+      abnormal_interrupt: True
+      delay_time: 1
+  -
+    -
+      action: ModUserInfo
+      multiple: 10
+      caps: 100
+      abnormal_interrupt: True
+      delay_time: 1

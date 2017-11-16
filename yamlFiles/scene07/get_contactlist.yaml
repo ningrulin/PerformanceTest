@@ -1,0 +1,15 @@
+---
+scene_name: GetContactList
+scene_range: 1000
+scene_duration: 60
+total_members: 800
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: GetContactList
+      multiple: 16
+      delay_time: 1
+      caps: 50
+      sleep_after: 3
+      abnormal_interrupt: True

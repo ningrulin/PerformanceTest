@@ -1,0 +1,37 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 10
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 10
+      delay_time: 0
+      time_out: 10
+      sleep_after: 3
+  -
+    -
+      action: GetUserInfo
+      multiple: 1
+      caps: 10
+      delay_time: 0
+  -
+    -
+      action: CreateComGroup2
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      group_number: 10
+      sleep_after: 3
+  -
+    -
+      action: create_end_conf
+      inherit: ./yamlFiles/conf_demo_caps.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10

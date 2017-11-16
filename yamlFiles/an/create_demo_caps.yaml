@@ -1,0 +1,39 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 100
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 100
+      delay_time: 0
+      time_out: 10
+      sleep_after: 3
+  -
+    -
+      action: GetUserInfo
+      multiple: 1
+      caps: 100
+      delay_time: 0
+  -
+    -
+      action: CreateComGroup2
+      inherit: ./yamlFiles/an/oper_demo_creategroup.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 10
+      group_number: 1
+      sleep_after: 3
+  -
+    -
+      action: CreateConference9
+      inherit: ./yamlFiles/an/oper_demo_create.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 10
+

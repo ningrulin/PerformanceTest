@@ -1,0 +1,12 @@
+---
+scene_name: login
+total_members: 1
+scene_range: 1
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 1
+      sleep_after: 3

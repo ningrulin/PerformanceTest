@@ -1,0 +1,80 @@
+---
+scene_name: CreateAndEndConference
+scene_range: 100
+scene_duration: 1
+total_members: 10
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: CreateConference
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      with_media: True
+      abnormal_interrupt: True
+      sleep_after: 5
+  -
+    -
+      action: GetContactList
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      abnormal_interrupt: True
+      sleep_after: 5
+  -
+    -
+      action: ApplyFloor
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      abnormal_interrupt: True
+      sleep_after: 5
+  -
+    -
+      action: EnablePPTShare
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      abnormal_interrupt: True
+      sleep_after: 5
+  -
+    -
+      action: Mss
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 5
+      abnormal_interrupt: True
+  -
+    -
+      action: MuteMember
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 5
+      abnormal_interrupt: True
+  -
+    -
+      action: UpdateStatus
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 5
+      abnormal_interrupt: True
+  -
+    -
+      action: QueryConf
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 5
+      abnormal_interrupt: True
+  -
+    -
+      action: EndConference
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 5
+      abnormal_interrupt: True

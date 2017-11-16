@@ -1,0 +1,46 @@
+---
+scene_name: create_conference
+scene_range: 10
+executors: 1
+executors_state: online_idle
+is_progressive: False
+scene_step_list:
+  -
+    -
+      action: CreateConference
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      sleep_after: 16
+  -
+    -
+      action: MSS
+      multiple: 1
+      caps: 1
+      range: 1000
+      delay_time: 0
+      sleep_after: 16
+  -
+    -
+      action: ApplyFloor
+      multiple: 1
+      caps: 1
+      range: 1000
+      delay_time: 0
+      sleep_after: 16
+  -
+    -
+      action: PPTShare
+      multiple: 1
+      caps: 1
+      range: 1000
+      delay_time: 0
+      sleep_after: 16
+  -
+    -
+      action: Mute
+      multiple: 1
+      caps: 1
+      range: 1000
+      delay_time: 0
+      sleep_after: 16

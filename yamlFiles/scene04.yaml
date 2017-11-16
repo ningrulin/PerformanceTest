@@ -1,0 +1,55 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 80
+executors_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      delay_time: 1
+      caps: 50
+      parallel_num: 16
+      time_out: 10
+  -
+    -
+      action: GetUserInfo
+      delay_time: 1
+      caps: 50
+      parallel_num: 16
+  -
+    -
+      action: CreatCommonGroup
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      data: {"group_number":16}
+  -
+    -
+      action: EnableGroupShare
+      multiple: 1
+      caps: 5
+      delay_time: 0
+  -
+    -
+      action: JoinGroupByID
+      multiple: 5
+      caps: 15
+      delay_time: 0
+  -
+    -
+      inherit: ./creat_conference.yaml
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 1
+      range: 10
+  -
+    -
+      action: ApplyFloor
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 1
+      range: 10

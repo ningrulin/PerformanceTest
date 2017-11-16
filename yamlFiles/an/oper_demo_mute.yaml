@@ -1,0 +1,24 @@
+---
+scene_name: MuteMember
+scene_range: 1
+scene_duration: 1
+total_members: 100
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: MuteMember
+      inherit: ./yamlFiles/an/oper_demo_mute1.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 1
+      check_result: False
+    -
+      action: MuteMember
+      inherit: ./yamlFiles/an/oper_demo_mute2.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 1
+      sleep_after: 1
+      check_result: False

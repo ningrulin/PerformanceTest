@@ -1,0 +1,18 @@
+---
+scene_name: login_sleep_logout
+total_members: 200
+scene_range: 1
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 4
+      caps: 50
+      sleep_after: 3
+  -
+    -
+      action: Logout
+      multiple: 4
+      caps: 50
+      sleep_after: 3

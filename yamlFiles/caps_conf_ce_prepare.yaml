@@ -1,0 +1,33 @@
+---
+scene_name: caps_conf_create_end
+scene_range: 1
+scene_duration: 60
+total_members: 200
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 4
+      caps: 50
+      delay_time: 1
+  -
+    -
+      action: GetUserInfo
+      multiple: 4
+      caps: 50
+      delay_time: 1
+  -
+    -
+      action: CreateComGroup2
+      multiple: 2
+      caps: 50
+      delay_time: 1
+      group_number: 2
+  -
+    -
+      action: create_end_conf
+      inherit: ./yamlFiles/caps_conf_ce.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0

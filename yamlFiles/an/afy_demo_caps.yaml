@@ -1,0 +1,70 @@
+---
+scene_name: scene_name_02
+scene_range: 1
+scene_duration: 60
+total_members: 100
+member_state: offline_idle
+scene_step_list:
+  -
+    -
+      action: Login
+      multiple: 1
+      caps: 100
+      delay_time: 0
+      time_out: 20
+      sleep_after: 3
+  -
+    -
+      action: GetUserInfo
+      multiple: 1
+      caps: 100
+      delay_time: 0
+  -
+    -
+      action: CreateComGroup2
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      group_number: 100
+      sleep_after: 3
+  -
+    -
+      action: CreateConference2
+      multiple: 1
+      abnormal_interrupt: True
+      caps: 1
+      delay_time: 1
+      sleep_after: 10
+      with_media: True
+  -
+    -
+      action: JoinConference2
+      inherit: ./yamlFiles/an/oper_demo_join.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10
+  -
+    -
+      action: ModifyConfState
+      multiple: 1
+      caps: 1
+      conf_mod: 0
+      delay_time: 0
+      time_out: 10
+  -
+    -
+      action: ApplyFloor
+      inherit: ./yamlFiles/an/oper_demo_afy.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10
+  -
+    -
+      action: GetSinfo
+      inherit: ./yamlFiles/an/oper_demo_getSinfo.yaml
+      multiple: 1
+      caps: 1
+      delay_time: 0
+      time_out: 10

@@ -1,0 +1,62 @@
+{
+    'scene_name': 'scene_confs',
+    'scene_steps': [
+        {
+            'step_features': [
+                {
+                    'feature_name': 'creat_group',
+                    'feature_action': 'CreatGroupAction',
+                    'data': 'None',
+                    'executorsNum': 1,
+                    'optional': False,
+                    'expectationCode': '200',
+                    'step_desc': 'creat_group'
+                }
+            ],
+            'step_name': 'step01'
+        },
+        {
+            'step_features': [
+                {
+                    'feature_name': 'sleep',
+                    'feature_action': 'MxCommonAction',
+                    'data': 2,
+                    'executorsNum': 10,
+                    'optional': False,
+                    'expectationCode': 'None',
+                    'step_desc': 'MxCommonAction'
+                }
+            ],
+            'step_name': 'MxCommonAction'
+        },
+        {
+            'step_features': [
+                {
+                    'feature_name': 'join_group',
+                    'feature_action': 'JoinGroupAction',
+                    'data': 2,
+                    'executorsNum': 9,
+                    'optional': False,
+                    'expectationCode': '200',
+                    'step_desc': 'join_group'
+                }
+            ],
+            'step_name': 'step03'
+        },
+        {
+            'step_features': [
+                {
+                    'feature_name': 'scene_cfs',
+                    'feature_action': 'MxCommonAction',
+                    'data': 2,
+                    'executorsNum': 100,
+                    'optional': False,
+                    'expectationCode': 'None',
+                    'step_desc': 'MxCommonAction',
+					"executorsTimes":100
+                }
+            ],
+            'step_name': 'step04'
+        }
+    ]
+}

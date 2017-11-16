@@ -1,0 +1,24 @@
+---
+scene_name: mss
+scene_range: 8000
+scene_duration: 1
+total_members: 200
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: CreateConference2
+      multiple: 1
+      abnormal_interrupt: False
+      caps: 1
+      delay_time: 1
+      sleep_after: 2
+      with_media: True
+  -
+    -
+      action: EndConference
+      multiple: 1
+      abnormal_interrupt: False
+      caps: 1
+      delay_time: 1
+      sleep_after: 1

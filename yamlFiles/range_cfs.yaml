@@ -1,0 +1,43 @@
+ ---
+scene_name: login_sleep_logout
+total_members: 1
+scene_range: 10
+executors_state: online_idle
+scene_step_list:
+  -
+    -
+      inherit: ./start_end_cfs.yaml
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 16
+  -
+    -
+      action: Mss
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 16
+      range: 10
+  -
+    -
+      action: ApplyFloor
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 16
+      range: 10
+  -
+    -
+      action: Mute
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 16
+  -
+    -
+      action: PPTShare
+      multiple: 1
+      caps: 5
+      delay_time: 0
+      sleep_time: 16

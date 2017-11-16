@@ -1,0 +1,14 @@
+---
+scene_name: afy9
+scene_range: 10000
+scene_duration: 1
+total_members: 50
+member_state: online_idle
+scene_step_list:
+  -
+   -
+      action: ApplyFloor
+      multiple: 1
+      caps: 10
+      delay_time: 1
+      sleep_after: 10

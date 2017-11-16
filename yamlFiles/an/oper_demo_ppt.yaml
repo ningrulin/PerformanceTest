@@ -1,0 +1,23 @@
+---
+scene_name: EnablePPTShare
+scene_range: 10000
+scene_duration: 1
+total_members: 200
+member_state: online_idle
+scene_step_list:
+  -
+    -
+      action: EnablePPTShare
+      multiple: 1
+      caps: 10
+      delay_time: 1
+      sleep_after: 10
+      check_Tager: True
+  -
+    -
+      action: EnablePPTShare
+      multiple: 1
+      caps: 10
+      delay_time: 1
+      sleep_after: 10
+      check_Tager: False
